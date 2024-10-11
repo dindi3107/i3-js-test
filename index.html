@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javasctipt test">
+    <title>Kviz</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <!-- Sidebar s listom pitanja -->
+        <aside class="quiz-sidebar">
+            <h2>Kviz Pitanja</h2>
+            <ul id="questionList" class="question-list">
+                <!-- Dinamički generirane stavke -->
+            </ul>
+        </aside>
+
+        <!-- Glavni sadržaj kviza -->
+        <main class="quiz-main">
+            <div class="quiz-container">
+                <form id="quizForm">
+                    <!-- Pitanja će biti dinamički generirana ovdje -->
+                </form>
+                <div class="navigation-buttons">
+                    <button type="button" id="prevBtn" class="nav-btn">Prethodno</button>
+                    <button type="button" id="nextBtn" class="nav-btn">Sljedeće</button>
+                    <button type="button" id="showResultsBtn" class="nav-btn" disabled>Prikaži rezultate</button>
+                </div>
+                <div id="result" class="result"></div>
+            </div>
+        </main>
+    </div>
+    <div id="warning" class="warning"></div>
+    <button id="theme-toggle-btn" class="theme-toggle-btn">
+        <span id="theme-name">Tema</span>
+        <span class="theme-icon"><i class="fas fa-circle"></i></span>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>

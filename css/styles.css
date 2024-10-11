@@ -1,0 +1,412 @@
+/* Definicija CSS varijabli za paletu boja */
+:root {
+    /* Osnovne boje - Monokromatska Paleta */
+    --color-background: linear-gradient(135deg, #f0f4f8, #d1e3f0);
+    --color-sidebar: #2D3748; /* Tamno siva-plava */
+    --color-sidebar-border: #4A5568; /* Srednje siva-plava */
+    --color-sidebar-text: #E2E8F0; /* Svijetlo siva */
+    --color-question-bg: #FFFFFF; /* Bijela */
+    --color-question-border: #CBD5E0; /* Siva */
+    --color-question-active: #3182CE; /* Suptilno plava */
+    --color-question-completed: #38A169; /* Suptilno zelena */
+    --color-question-hover: #2B6CB0; /* Tamno plava */
+    --color-container-bg: #FFFFFF; /* Bijela */
+    --color-heading: #1A202C; /* Tamno siva */
+    --color-question-text: #2D3748; /* Tamno siva-plava */
+    --color-answer-btn: #EDF2F7; /* Svijetlo siva */
+    --color-answer-btn-border: #CBD5E0; /* Siva */
+    --color-answer-btn-selected: #3182CE; /* Suptilno plava */
+    --color-nav-btn: #4A5568; /* Srednje siva-plava */
+    --color-nav-btn-hover: #2B6CB0; /* Tamno plava */
+    --color-nav-btn-disabled: #A0AEC0; /* Siva */
+    --color-result-bg: #F0FFF4; /* Vrlo svijetlo zelena */
+    --color-result-text: #22543D; /* Tamno zelena */
+    --color-warning-bg: #FFF5F5; /* Vrlo svijetlo crvena */
+    --color-warning-text: #C53030; /* Tamno crvena */
+}
+
+/* Monokromatska Paleta */
+.theme-monochromatic {
+    --color-background: linear-gradient(135deg, #f0f4f8, #d1e3f0);
+    --color-sidebar: #2D3748;
+    --color-sidebar-border: #4A5568;
+    --color-sidebar-text: #E2E8F0;
+    --color-question-active: #3182CE;
+    --color-question-completed: #38A169;
+    --color-question-hover: #2B6CB0;
+    --color-answer-btn-selected: #3182CE;
+}
+
+/* Tamna Paleta (Dark Mode) */
+.theme-dark {
+    --color-background: #1F2937; /* Tamno plava */
+    --color-sidebar: #111827; /* Vrlo tamno plava */
+    --color-sidebar-border: #374151; /* Tamno siva-plava */
+    --color-sidebar-text: #F9FAFB; /* Bijela */
+    --color-question-bg: #374151; /* Tamno siva-plava */
+    --color-question-border: #4B5563; /* Tamno siva */
+    --color-question-active: #3B82F6; /* Plava */
+    --color-question-completed: #10B981; /* Emerald zelena */
+    --color-question-hover: #2563EB; /* Tamno plava */
+    --color-container-bg: #1F2937; /* Tamno plava */
+    --color-heading: #F9FAFB; /* Bijela */
+    --color-question-text: #F9FAFB; /* Bijela */
+    --color-answer-btn: #4B5563; /* Tamno siva */
+    --color-answer-btn-border: #6B7280; /* Siva */
+    --color-answer-btn-selected: #3B82F6; /* Plava */
+    --color-nav-btn: #10B981; /* Emerald zelena */
+    --color-nav-btn-hover: #059669; /* Tamno emerald */
+    --color-nav-btn-disabled: #6B7280; /* Siva */
+    --color-result-bg: #065F46; /* Tamno zelena */
+    --color-result-text: #D1FAE5; /* Svijetlo zelena */
+    --color-warning-bg: #991B1B; /* Tamno crvena */
+    --color-warning-text: #FEF2F2; /* Vrlo svijetlo crvena */
+}
+
+/* Sofisticirana Paleta s Zlatnim Akcentima */
+.theme-sophisticated {
+    --color-background: linear-gradient(135deg, #f5f7fa, #e4e4e7);
+    --color-sidebar: #1F2937; /* Tamno siva-plava */
+    --color-sidebar-border: #4B5563; /* Tamno siva */
+    --color-sidebar-text: #F3F4F6; /* Svijetlo siva */
+    --color-question-active: #FBBF24; /* Zlatna */
+    --color-question-completed: #D97706; /* Tamno zlatna */
+    --color-question-hover: #F59E0B; /* Tamno zlatna */
+    --color-answer-btn-selected: #FBBF24; /* Zlatna */
+    --color-nav-btn: #F59E0B; /* Tamno zlatna */
+    --color-nav-btn-hover: #D97706; /* Tamno zlatna */
+}
+
+.btn-theme {
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6B7280;
+    color: #fff;
+}
+
+/* Stilovi za gumb teme */
+.theme-toggle-btn {
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-nav-btn);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--color-nav-btn-hover);
+    transform: translateY(-2px);
+}
+
+/* Ikona kruga ili točkica */
+.theme-toggle-btn .theme-icon {
+    display: none;
+    font-size: 1.2em; /* Prilagodi veličinu ikone */
+}
+
+
+
+
+/* Opći stilovi */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body { 
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background: var(--color-background);
+    overflow: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.quiz-wrapper {
+    display: flex;
+    flex-direction: row;    
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.quiz-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: var(--color-sidebar);
+    padding: 20px;
+    width: 250px;
+    min-width: 200px;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--color-sidebar-border);
+    box-sizing: border-box;
+}
+
+.quiz-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 30px 20px;
+    overflow-y: auto;
+}
+
+.quiz-sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-sidebar-text);
+}
+
+.question-list {
+    list-style-type: none;
+    padding: 0px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.question-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--color-question-bg);
+    border: 1px solid var(--color-question-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.question-list li.active,
+.question-list li.completed {
+    background-color: var(--color-question-active);
+    border-color: var(--color-question-active);
+    color: var(--color-sidebar-text);
+}
+
+.question-list li.completed::after {
+    content: "\2713"; /* Kvačica */
+    margin-left: auto;
+    font-size: 1.2em;
+}
+
+.question-list li:hover {
+    background-color: var(--color-question-hover);
+    color: var(--color-sidebar-text);
+    transform: translateY(-2px);
+}
+
+.quiz-container {
+    background-color: var(--color-container-bg);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin: 1rem auto;
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-heading);
+}
+
+.question-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    min-height: 200px; /* Fiksna visina kako bi spriječila skakanje */
+}
+
+.question-slide.active {
+    display: block;
+}
+
+.question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--color-question-text);
+}
+
+.answers {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.answers li {
+    flex: 1 1 calc(50% - 10px); /* Dva odgovora po retku */
+}
+
+.answers button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--color-answer-btn);
+    border: 2px solid var(--color-answer-btn-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    position: relative;
+    text-align: left;
+}
+
+.answers button.selected {
+    background-color: var(--color-answer-btn-selected);
+    color: var(--color-sidebar-text);
+    border-color: var(--color-answer-btn-selected);
+}
+
+.answers button::after {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    display: none;
+}
+
+.answers button.selected::after {
+    display: block;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    padding: 12px 25px;
+    background-color: var(--color-nav-btn);
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background-color: var(--color-nav-btn-hover);
+    transform: translateY(-2px);
+}
+
+.nav-btn:disabled,
+#showResultsBtn:disabled {
+    background-color: var(--color-nav-btn-disabled);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.1em;
+    background-color: var(--color-result-bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    color: var(--color-result-text);
+}
+
+.warning {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning-text);
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    width: calc(100% - 40px);
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.warning.show {
+    opacity: 1;
+}
+
+/* Animacije */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+    .quiz-wrapper {
+        flex-direction: column;
+    }
+
+    .quiz-sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-sidebar-border);
+        margin-bottom: 0;
+    }
+
+    .quiz-main {
+        padding: 10px;
+    }
+
+    .quiz-container {
+        padding: 20px;
+    }
+
+    .nav-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .question-list li {
+        font-size: 0.9em;
+    }
+
+    .answers li {
+        flex: 1 1 100%; /* Jedan odgovor po retku na manjim ekranima */
+    }
+    .warning {
+        width: calc(100% - 40px); /* Prilagodi širinu */
+    }
+
+    #theme-name {
+        display: none;
+    }
+    .theme-toggle-btn .theme-icon {
+        display: inline-block;
+    }
+}
+
